@@ -5,11 +5,14 @@ def execute() {
             echo 'beginnning workflow...'
     
             stage 'prepare gems'
-            sh '''#!/bin/bash           
+            sh '''#!/bin/bash   
+            bundle -v
+            gem update --system
             gem update bundler
             gem --version
             gem update --system
-            bundle install
+            bundle install --path=vendor/bundle
+            rspec-puppet-init
             '''
                       
             stage 'rspec testing'
