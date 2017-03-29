@@ -5,7 +5,8 @@ def execute() {
             echo 'beginnning workflow...'
     
             stage 'prepare gems'
-            sh '''#!/bin/bash   
+            sh '''#!/bin/bash
+            ruby --version
             bundle -v
             gem update --system
             gem update bundler
