@@ -3,15 +3,16 @@ package org.foo;
 def execute() {
   node {
             echo 'beginnning workflow...'
-          
+            which bundle
             stage 'prepare gems'
             sh '''#!/bin/bash
-            which bundle
+            
             gem update bundler
             gem --version
             gem update --system
-            sudo bundle install --path=.bundle/gems/
+            
             '''
+            bundle install --path=.bundle/gems/
                       
             stage 'rspec testing'
             sh '''#!/bin/bash
