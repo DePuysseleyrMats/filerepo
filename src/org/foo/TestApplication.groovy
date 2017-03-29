@@ -4,15 +4,14 @@ def execute() {
   node {
             echo 'beginnning workflow...'
             which bundle
+    
             stage 'prepare gems'
-            sh '''#!/bin/bash
-            
+            sh '''#!/bin/bash           
             gem update bundler
             gem --version
             gem update --system
-            
-            '''
             bundle install --path=.bundle/gems/
+            '''
                       
             stage 'rspec testing'
             sh '''#!/bin/bash
