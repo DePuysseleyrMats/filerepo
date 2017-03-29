@@ -3,6 +3,7 @@ package org.foo;
 def execute() {
   node {
             echo 'beginnning workflow...'
+            echo $PATH        
     
             stage 'prepare gems'
             sh '''#!/bin/bash
