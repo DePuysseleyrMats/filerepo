@@ -5,7 +5,7 @@ def execute() {
             echo 'beginnning workflow...'
           
             stage 'prepare gems'
-            sh '''#!/bin/bash
+            sh '''
             gem update bundler
             gem --version
             gem update --system
@@ -13,12 +13,12 @@ def execute() {
             '''
           
             stage 'rspec testing'
-            sh '''#!/bin/bash
+            sh '''
             bundle exec rake test
             '''
             
             stage 'beaker testing'
-            sh '''#!/bin/bash
+            sh '''
             bundle exec rake beaker
             '''  
           }
