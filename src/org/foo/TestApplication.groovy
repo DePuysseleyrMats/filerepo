@@ -5,12 +5,14 @@ def execute() {
             echo 'beginnning workflow...'
           
             stage 'prepare gems'
-            sh '''#!/bin/bash
-            gem update bundler
-            gem --version
-            gem update --system
-            bundle install --path=.bundle/gems/
-            '''
+            withEnv(['PATH=/usr/bin:/bin:/usr/sbin:/:sbin/usr/local/bin:$PATH']) {
+                sh '''#!/bin/bash
+                gem update bundler
+                gem --version
+                gem update --system
+                bundle install --path=.bundle/gems/
+                '''
+            }
           
             stage 'rspec testing'
             sh '''#!/bin/bash
