@@ -6,6 +6,7 @@ def execute() {
     
             stage 'prepare gems'
             sh '''#!/bin/bash
+            rvm use 2.1.5
             echo $PATH
             ruby --version
             bundle -v
