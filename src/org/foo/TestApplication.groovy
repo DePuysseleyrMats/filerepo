@@ -3,7 +3,6 @@ package org.foo;
 def execute() {
   node {
             echo 'beginnning workflow...'
-            which bundle
     
             stage 'prepare gems'
             sh '''#!/bin/bash           
