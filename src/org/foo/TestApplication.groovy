@@ -6,6 +6,7 @@ def execute() {
           
             stage 'prepare gems'
             sh '''#!/bin/bash
+            gem install bundler
             gem update bundler
             gem --version
             gem update --system
