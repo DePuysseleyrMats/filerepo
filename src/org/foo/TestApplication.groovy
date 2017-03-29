@@ -9,7 +9,7 @@ def execute() {
             gem update bundler
             gem --version
             gem update --system
-            bundle install --path=.bundle/gems/
+            bundle install
             '''
                       
             stage 'rspec testing'
