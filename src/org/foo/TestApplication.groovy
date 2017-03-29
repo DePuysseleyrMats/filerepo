@@ -12,7 +12,6 @@ def execute() {
             gem --version
             gem update --system
             bundle install --path=vendor/bundle
-            rspec-puppet-init
             '''
                       
             stage 'rspec testing'
