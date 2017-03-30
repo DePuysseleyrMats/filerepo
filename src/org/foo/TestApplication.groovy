@@ -15,7 +15,7 @@ def execute() {
             gem --version
             gem update --system
             pwd
-            cp ${workspace}@script ${workspace}
+            cp '${workspace}@script' '${workspace}'
             bundle install --path=vendor/bundle
             '''
                       
