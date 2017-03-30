@@ -5,9 +5,6 @@ def execute() {
   
   node {
             checkout scm
-            def workspace = pwd()
-            def gemfile = libraryResource 'org.foo.GemFile'
-            writeFile file: '${workspace}/Gemfile', text: gemfile
             echo 'beginnning workflow...'       
               
             stage 'prepare gems'
