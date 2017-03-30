@@ -20,11 +20,13 @@ def execute() {
                       
             stage 'rspec testing'
             sh '''#!/bin/bash
+            source /usr/local/rvm/scripts/rvm
             bundle exec rake test
             '''
             
             stage 'beaker testing'
             sh '''#!/bin/bash
+            source /usr/local/rvm/scripts/rvm
             bundle exec rake beaker
             '''  
           }
