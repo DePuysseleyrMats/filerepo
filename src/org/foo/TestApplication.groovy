@@ -1,6 +1,9 @@
 package org.foo;
 
 def execute() {
+  def workspace = pwd()
+  def gemfile = libraryResource 'org.foo.GemFile'
+  writeFile file: '${workspace}/Gemfile', text: gemfile
   node {
             checkout scm
             echo 'beginnning workflow...'       
