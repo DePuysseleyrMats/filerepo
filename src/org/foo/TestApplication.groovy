@@ -6,7 +6,7 @@ def execute() {
     
             stage 'prepare gems'
             sh '''#!/bin/bash
-            source ~/rvm/scripts/rvm
+            source /usr/local/rvm/scripts/rvm
             rvm use 2.1.5
             echo $PATH
             ruby --version
