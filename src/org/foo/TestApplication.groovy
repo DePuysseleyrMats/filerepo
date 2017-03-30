@@ -2,8 +2,9 @@ package org.foo;
 
 def execute() {
   node {
+            def workspace = pwd() 
             echo 'beginnning workflow...'       
-    
+              
             stage 'prepare gems'
             sh '''#!/bin/bash
             source /usr/local/rvm/scripts/rvm
@@ -14,6 +15,7 @@ def execute() {
             gem --version
             gem update --system
             pwd
+            cp ${workspace}@script ${workspace}
             bundle install --path=vendor/bundle
             '''
                       
