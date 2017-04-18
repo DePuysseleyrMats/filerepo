@@ -31,9 +31,6 @@ def execute() {
             VBoxManage --version
             bundle exec rake beaker SPEC_OPTS="--format documentation" 
             '''  
-    
-            stage 'cleanup'
-            deleteDir()
           }
 }
 
