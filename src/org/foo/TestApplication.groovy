@@ -4,6 +4,7 @@ def execute() {
   
   
   node {
+            wrap([$class: 'AnsiColorBuildWrapper', 'colorMapName': 'xterm']) {
             checkout scm
             echo 'beginnning workflow...'       
               
@@ -24,7 +25,7 @@ def execute() {
             source /usr/local/rvm/scripts/rvm
             bundle exec rake test SPEC_OPTS="--format documentation" 
             '''
-            wrap([$class: 'AnsiColorBuildWrapper', 'colorMapName': 'xterm']) {
+            
             stage 'beaker testing'
             sh '''#!/bin/bash
             source /usr/local/rvm/scripts/rvm
