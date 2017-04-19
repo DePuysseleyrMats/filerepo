@@ -1,5 +1,5 @@
 package org.foo;
-wrap([$class: 'AnsiColorBuildWrapper', 'colorMapName': 'xterm']) {
+
 def execute() {
   
   
@@ -33,5 +33,5 @@ def execute() {
             '''  
           }
 }
-}
+
 return this;
