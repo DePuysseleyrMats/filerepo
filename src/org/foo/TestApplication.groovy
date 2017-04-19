@@ -24,13 +24,14 @@ def execute() {
             source /usr/local/rvm/scripts/rvm
             bundle exec rake test SPEC_OPTS="--format documentation" 
             '''
-            
+            wrap([$class: 'AnsiColorBuildWrapper', 'colorMapName': 'xterm']) {
             stage 'beaker testing'
             sh '''#!/bin/bash
             source /usr/local/rvm/scripts/rvm
             VBoxManage --version
             bundle exec rake beaker SPEC_OPTS="--format documentation" 
             '''  
+            }
           }
 }
 
