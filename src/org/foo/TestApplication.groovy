@@ -3,7 +3,7 @@ package org.foo;
 def execute() {
   
   
-  node {
+  node('testslave') {
             wrap([$class: 'AnsiColorBuildWrapper', 'colorMapName': 'xterm']) {
             checkout scm
             echo 'beginnning workflow...'       
