@@ -3,7 +3,7 @@ package org.foo;
 def execute() {
   
   
-  node {
+  node('testslave') {
             docker.image('testslave').inside {
 
               wrap([$class: 'AnsiColorBuildWrapper', 'colorMapName': 'xterm']) {
