@@ -6,7 +6,7 @@ def execute() {
   node(
             
             
-              stage 'Prepare environment'
+              
               wrap([$class: 'AnsiColorBuildWrapper', 'colorMapName': 'xterm']) {
               
                   checkout scm
