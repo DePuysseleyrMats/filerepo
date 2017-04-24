@@ -3,7 +3,7 @@ package org.foo;
 def execute() {
   
   
-  node {
+  node('testslave') {
             
             withDockerContainer('testslave').inside {
 
