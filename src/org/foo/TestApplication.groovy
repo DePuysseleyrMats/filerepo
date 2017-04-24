@@ -3,8 +3,9 @@ package org.foo;
 def execute() {
   
   
-  node('testslave') {
-            docker.image('testslave').inside {
+  node {
+            
+            withDockerContainer('testslave').inside {
 
               wrap([$class: 'AnsiColorBuildWrapper', 'colorMapName': 'xterm']) {
               checkout scm
