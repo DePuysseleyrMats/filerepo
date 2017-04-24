@@ -8,8 +8,7 @@ def execute() {
             
               stage 'Prepare environment'
               wrap([$class: 'AnsiColorBuildWrapper', 'colorMapName': 'xterm']) {
-              def environmnent = docker.build 'testslave'  
-                environment.inside {
+              
                   checkout scm
                   echo 'beginnning workflow...'       
 
