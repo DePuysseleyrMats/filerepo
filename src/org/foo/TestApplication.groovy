@@ -3,7 +3,7 @@ package org.foo;
 def execute() {
   
   
-  node(
+  node{
             
             
               
@@ -38,7 +38,7 @@ def execute() {
                   '''  
                  }
               
-            )
+  }
 }
           
 
