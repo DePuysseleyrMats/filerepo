@@ -3,7 +3,7 @@ package org.foo;
 def execute() {
   
   
-  node('testslave') {
+  node(
             
             
               stage 'Prepare environment'
