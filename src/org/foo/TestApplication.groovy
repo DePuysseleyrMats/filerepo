@@ -37,7 +37,7 @@ def execute() {
                   bundle exec rake beaker SPEC_OPTS="--format documentation" 
                   '''  
                  }
-              }
+              
             }
           
 
