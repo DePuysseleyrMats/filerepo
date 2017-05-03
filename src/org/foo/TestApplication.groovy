@@ -34,7 +34,7 @@ def execute() {
                   sh '''#!/bin/bash
                   source /usr/local/rvm/scripts/rvm
                   VBoxManage --version
-                  bundle exec rake beaker SPEC_OPTS="--format documentation" 
+                  bundle exec rake beaker BEAKER_destroy=onpass SPEC_OPTS="--format documentation" 
                   '''  
                  }
               
