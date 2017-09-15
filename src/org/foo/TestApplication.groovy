@@ -3,7 +3,7 @@ package org.foo;
 def execute() {
   
   
-  node('web'){
+  node('testslave'){
             
             
               
